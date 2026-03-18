@@ -1,0 +1,49 @@
+
+ORDEN RECOMENDADO PARA PROGRAMAR — CENTRO DEPORTIVO V1
+
+1. data.py
+   - Definir MIEMBROS
+   - Definir PRECIO_BASE
+
+2. ui.py
+   - preguntar_si_es_miembro()
+   - pedir_id()
+
+3. services.py
+   - buscar_miembro_por_id()
+   - calcular_descuento_por_edad()
+   - calcular_precio_final()
+
+4. ui.py (completar)
+   - mostrar_error()
+   - mostrar_resultado()
+
+5. main.py
+   - Conectar todo el flujo del programa
+   - Orquestar llamadas a ui y services
+
+
+ORDEN EXACTO DE FUNCIONES
+
+1. data.py
+2. ui.preguntar_si_es_miembro()
+3. ui.pedir_id()
+4. services.buscar_miembro_por_id()
+5. services.calcular_descuento_por_edad()
+6. services.calcular_precio_final()
+7. ui.mostrar_error()
+8. ui.mostrar_resultado()
+9. main.py
+
+
+RECOMENDACIÓN PARA EMPEZAR
+
+1. Abrir ui.py
+2. Implementar preguntar_si_es_miembro()
+3. Probar mentalmente con entradas:
+   - si
+   - s
+   - no
+   - n
+   - entrada inválida
+4. Luego implementar pedir_id()

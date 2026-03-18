@@ -1,0 +1,64 @@
+
+FLUJO DEL PROGRAMA — CENTRO DEPORTIVO V1
+
+1. main inicia el programa
+
+2. main llama a ui para preguntar si es miembro
+
+3. ui devuelve True o False
+
+4. main decide el camino
+
+
+SI RESPONDE TRUE
+
+5. main llama a ui para pedir el ID
+
+6. ui valida y normaliza el ID
+
+7. ui devuelve el ID a main
+
+8. main llama a services.buscar_miembro_por_id()
+
+9. services devuelve el miembro o None
+
+
+SI DEVUELVE NONE
+
+10. main llama a ui.mostrar_error()
+
+11. termina o vuelve a intentar
+
+
+SI DEVUELVE EL MIEMBRO
+
+10. main llama a services.calcular_precio_final()
+
+11. services aplica reglas:
+   - si está activo
+   - si tiene descuento por edad
+   - o si paga precio base
+
+12. services devuelve el resultado
+
+13. main manda ese resultado a ui
+
+14. ui muestra el resultado
+
+
+SI RESPONDE FALSE
+
+5. main llama a services.calcular_precio_final() para no miembro
+
+6. services devuelve precio base
+
+7. main manda el resultado a ui
+
+8. ui lo muestra
+
+
+REGLA IMPORTANTE DE ARQUITECTURA
+
+- main no aplica descuentos
+- services aplica descuentos
+- main solo decide a qué función llamar y en qué orden
